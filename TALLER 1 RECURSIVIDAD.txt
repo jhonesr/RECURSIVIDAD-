@@ -1,0 +1,122 @@
+//Secuencia
+function texto ( cadena ){
+	document.write( cadena + "<br>" );
+}
+function salto(){
+  document.write("<br>")
+}
+	texto("UNO");
+		texto("DOS");
+		texto("TRES");
+texto("")
+		texto(1)
+		texto(2)
+		texto(3)
+
+//Iteracion
+var i= 0;
+while(i < 10){
+  texto( i );
+	i=i+1;
+}
+//Recursividad
+texto("");
+function numeros( a, b){
+  var i = a;
+  while(i <= b ){
+    texto( i);
+    i = i + 1;
+  }
+}
+
+numeros ( 1, 10);
+salto()
+numeros( 7, 16);;
+salto()
+
+//Recursividad
+
+function escribir( a, b){
+  if( a > b) {
+    return;
+  }else {
+    texto( a );
+    escribir( a + 1, b);
+  }
+
+
+}
+
+
+escribir( 1, 10);
+salto();
+escribir( 25, 35 );
+
+function multiplicar ( a, b){
+  if(a == 0){
+    return 0;
+  } else {
+    return b + multiplicar( a - 1, b);
+  }
+}
+
+salto();
+texto(" 6 * 4 = ");
+resp = multiplicar( 6, 4 );
+
+texto(resp.toString() );
+
+<!DOCTYPE html>
+<html>
+<head><title>Factorial</title></head>
+<body>
+<script type="text/javascript">
+	var num = prompt("Digite un numero");
+	var total = 1;
+
+	for(var i = 1; i <= num; i++){
+		total = total * i;
+	}
+	alert("El factorial del numero " +num + " es: "+total);
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head><title>Sumatoria</title></head>
+<body>
+<script type="text/javascript">
+	
+	function sumatoria ( num ){
+		if( num == 0){
+			return 0;
+		}
+		else{
+			return num + sumatoria ( num - 1);
+		}
+	}
+
+	document.write( sumatoria(50));
+</script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head><title>Potencia</title></head>
+<body>
+<script type="text/javascript">
+	var bas = prompt("Digite la base");
+	var exp = prompt("Digite el exponente")
+	var resultado = 1;
+
+	if( bas == 0){
+		return 0;
+	}
+	for (i = 1; i <= exp; i++) {
+  	resultado = resultado * bas;
+	}
+</script>
+</body>
+</html>
